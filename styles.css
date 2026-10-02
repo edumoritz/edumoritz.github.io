@@ -15,3 +15,10 @@
 .approach-grid p{font-size:16px;line-height:1.6}
 @media(max-width:950px){.approach-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 0}.approach-grid li:nth-child(3){padding-left:0;border-left:0}.approach-grid li:nth-child(2){padding-right:0}}
 @media(max-width:680px){.approach{padding:30px 0}.approach-heading{display:block}.approach-heading h2{margin:12px 0}.approach-grid{grid-template-columns:1fr;gap:22px;margin-top:24px}.approach-grid li,.approach-grid li:first-child,.approach-grid li:nth-child(3){padding:18px 0 0;border:0;border-top:1px solid var(--line)}.approach-grid h3{margin:6px 0}.approach-grid p{max-width:38ch}}
+
+/* Mídia dos projetos */
+.project-visual:has(.project-image):before,.project-visual:has(.project-image):after{display:none}
+.project-image{object-fit:contain;background:#0b171b}
+.project-gameplay{margin-top:20px}
+.project-gameplay summary{cursor:pointer;color:var(--blue);font-size:14px;padding:8px 0}
+.project-gameplay video{display:block;width:100%;height:auto;margin-top:10px;border-radius:6px;background:#000}

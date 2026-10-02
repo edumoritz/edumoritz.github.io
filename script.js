@@ -16,7 +16,15 @@
       const link = document.createElement('a'); link.href = project[key]; link.textContent = label; link.target = '_blank'; link.rel = 'noopener noreferrer'; footer.append(link);
     });
     if (!footer.children.length) { const status = document.createElement('span'); status.textContent = 'Apresentação em breve'; footer.append(status); }
-    body.append(category, title, description, footer); card.append(visual, body); list.append(card);
+    body.append(category, title, description);
+    if (project.video) {
+      const details = document.createElement('details'); details.className = 'project-gameplay';
+      const summary = document.createElement('summary'); summary.textContent = 'Assistir gameplay';
+      const video = document.createElement('video'); video.controls = true; video.preload = 'none'; video.playsInline = true; video.poster = project.image; video.src = project.video; video.setAttribute('aria-label', 'Gameplay de ' + project.title);
+      details.append(summary, video); body.append(details);
+      details.addEventListener('toggle', () => { if (!details.open) video.pause(); });
+    }
+    body.append(footer); card.append(visual, body); list.append(card);
   });
   document.getElementById('year').textContent = new Date().getFullYear();
   document.getElementById('copy-email').addEventListener('click', async () => {
