@@ -24,6 +24,16 @@
       details.append(summary, video); body.append(details);
       details.addEventListener('toggle', () => { if (!details.open) video.pause(); });
     }
+    if (project.images && project.images.length) {
+      const gallery = document.createElement('details'); gallery.className = 'project-gameplay project-gallery';
+      const summary = document.createElement('summary'); summary.textContent = 'Ver imagens (' + project.images.length + ')'; gallery.append(summary);
+      project.images.forEach((src, imageIndex) => {
+        const link = document.createElement('a'); link.href = src; link.target = '_blank'; link.rel = 'noopener noreferrer';
+        const img = document.createElement('img'); img.src = src; img.alt = project.title + ' — tela ' + (imageIndex + 1); img.loading = 'lazy';
+        link.append(img); gallery.append(link);
+      });
+      body.append(gallery);
+    }
     body.append(footer); card.append(visual, body); list.append(card);
   });
   document.getElementById('year').textContent = new Date().getFullYear();
