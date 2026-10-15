@@ -21,7 +21,6 @@ Abra `projects.js` e edite os três objetos: `title`, `description`, `category`,
 - Apresentação, experiência e contato: `index.html`.
 - Cores e layout: `styles.css`.
 - Foto: `assets/eduardo.jpg`.
-- Currículo: `assets/curriculo-eduardo-moritz.pdf`. O PDF fornecido é incluído e ficará público após a publicação; revise seus dados de contato antes de divulgar.
 
 Para visualizar, abra `index.html` no navegador ou execute `python3 -m http.server 8000` nesta pasta e acesse localhost:8000.
 
