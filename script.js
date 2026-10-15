@@ -1,7 +1,7 @@
 (() => {
   const validUrl = value => { try { return ['https:', 'http:'].includes(new URL(value).protocol); } catch { return false; } };
   const list = document.getElementById('project-list');
-  (window.PORTFOLIO_PROJECTS || []).slice(0, 3).forEach((project, index) => {
+  (window.PORTFOLIO_PROJECTS || []).forEach((project, index) => {
     const card = document.createElement('article'); card.className = 'project-card';
     const visual = document.createElement('div'); visual.className = 'project-visual';
     if (project.image) { const img = document.createElement('img'); img.className = 'project-image'; img.src = project.image; img.alt = project.title; img.loading = 'lazy'; visual.append(img); }

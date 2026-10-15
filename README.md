@@ -1,6 +1,6 @@
 # Eduardo Moritz — Portfólio
 
-Landing page estática, responsiva e sem dependências. Exatamente três espaços para projetos.
+Landing page estática, responsiva e sem dependências. Os projetos são definidos em `projects.js`, sem limite fixo de itens.
 
 ## Publicar gratuitamente
 
@@ -14,7 +14,7 @@ Se usar o repositório `eduardomoritz`, o endereço padrão será `https://edumo
 
 ## Editar projetos
 
-Abra `projects.js` e edite os três objetos: `title`, `description`, `category`, `image`, `demoUrl` e `repoUrl`. Imagens devem ser colocadas em `assets/`. Links vazios não aparecem. Mantenha `repoUrl` vazio para projetos de código privado; `demoUrl` pode apontar para uma aplicação pública mesmo quando o código é privado.
+Abra `projects.js` e adicione ou edite os objetos: `title`, `description`, `category`, `image`, `demoUrl` e `repoUrl`. Imagens devem ser colocadas em `assets/`. Links vazios não aparecem. Mantenha `repoUrl` vazio para projetos de código privado; `demoUrl` pode apontar para uma aplicação pública mesmo quando o código é privado.
 
 ## Outros ajustes
 
